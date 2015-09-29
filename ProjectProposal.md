@@ -10,9 +10,9 @@
 - Week of Sep 28: Create a general map of the activity flow/necessary pages
 - Oct 5: Have some of the basic web interfaces built; research encryption libraries
 - Oct 12: Start on unit tests, class designs
-- Oct 19: 
-- Oct 26:
-- Nov 2:
+- Oct 19: Finish up most of the front-end (non-encryption parts)
+- Oct 26: Work on Database layer; figure out how to integrate Hibernate
+- Nov 2: Continue with database; work on integrating encryption library
 - Nov 9:
 - Nov 16:
 - Nov 23:

@@ -15,7 +15,7 @@
 <h1>Error</h1>
 <h3 style="color: red">${errorMessage}</h3>
 <c:choose>
-    <c:when test="${not empty header['referer']}">
+    <c:when test="${not empty header['referer']} && ${pageContext.request.method} == 'GET">
         <p><a href="${header["referer"]}">Go back</a> and try again, or <a href="/">start over</a>.</p>
     </c:when>
     <c:otherwise>

@@ -15,11 +15,13 @@
     <form method="POST" action="/newNote">
         <label for="noteBody">Note Body</label>
         <br />
-        <textarea id="noteBody" name="noteBody" rows="10" cols="60">${noteBody}${param["noteBody"]}</textarea>
+        <textarea id="noteBody" name="noteBody" rows="10" cols="60" autofocus="autofocus">${noteBody}${param["noteBody"]}</textarea>
         <br />
         <label for="notePassword">Password</label>
         <br />
         <input id="notePassword" name="notePassword" type="password" />
+        <br />
+        <input type="submit" value="Submit" />
     </form>
 </body>
 </html>

@@ -13,9 +13,9 @@
 <body>
 <h1>Retrieve Note</h1>
 <form method="POST" action="/note">
-    <label for="noteUUID">Note UUID</label>
+    <label for="noteUuid">Note ID</label>
     <br />
-    <input type="text" id="noteUUID" name="noteUUID" maxlength="36" size="36" value="${param["noteUUID"]}" />
+    <input type="text" id="noteUuid" name="noteUuid" maxlength="36" size="36" value="${param["noteUuid"]}" />
 <script>
     // Only show these elements when JavaScript is enabled
     document.write('    <br />\r\n'
@@ -27,7 +27,7 @@
         document.getElementsByTagName("form")[0].addEventListener("submit", function(event) {
             var lightRed = "#FFAAAA";
 
-            var uuidField = document.getElementById("noteUUID");
+            var uuidField = document.getElementById("noteUuid");
             var uuidValue = uuidField.value;
 
             var passwordField = document.getElementById("notePassword");

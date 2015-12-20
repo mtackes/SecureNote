@@ -19,7 +19,7 @@ import java.util.UUID;
 public class GetNote extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         UUID pathUuid = RoutingUtils.getUuidInRequestPath(request);
-        String postUuidString = request.getParameter("noteUUID");
+        String postUuidString = request.getParameter("noteUuid");
 
         // Deal with UUID validation
         if (pathUuid == null) {

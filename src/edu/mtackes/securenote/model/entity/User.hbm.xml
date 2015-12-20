@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="edu.mtackes.securenote.model.entity.User" table="users">
+        <meta attribute="class-description">
+            This class contains the employee detail.
+        </meta>
+        <!--<property name="contentBytes" column="first_name" type="string"/>-->
+        <!--<property name="owner" column="owner_id" type="edu.mtackes.securenote.model.entity.User"/>-->
+        <id name="id" type="int" column="id">
+            <generator class="native" />
+        </id>
+        <!--<set name="notes" table="notes" inverse="true">-->
+            <!--<key>-->
+                <!--<column name="owner_id" />-->
+            <!--</key>-->
+            <!--<one-to-many class="edu.mtackes.securenote.model.entity.CryptoNote" />-->
+        <!--</set>-->
+
+
+        <!--<set name="stockDailyRecords" table="stock_daily_record"-->
+             <!--inverse="true" lazy="true" fetch="select">-->
+            <!--<key>-->
+                <!--<column name="STOCK_ID" not-null="true" />-->
+            <!--</key>-->
+            <!--<one-to-many class="com.mkyong.stock.StockDailyRecord" />-->
+        <!--</set>-->
+
+    </class>
+</hibernate-mapping>

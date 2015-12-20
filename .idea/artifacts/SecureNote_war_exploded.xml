@@ -12,6 +12,9 @@
           <element id="library" level="project" name="Hibernate 4.2.2-4.2.2" />
           <element id="library" level="application" name="JUnit4" />
           <element id="library" level="application" name="log4j" />
+          <element id="file-copy" path="$PROJECT_DIR$/../mysql-connector-java-5.1.37-bin.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../taglibs-standard-impl-1.2.5.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../taglibs-standard-spec-1.2.5.jar" />
         </element>
       </element>
     </root>

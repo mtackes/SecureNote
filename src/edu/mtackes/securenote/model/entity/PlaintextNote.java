@@ -10,19 +10,20 @@ import java.util.UUID;
  */
 public class PlaintextNote extends Note {
 
-    public PlaintextNote(UUID id, byte[] content) {
-        super(id, content);
+    public PlaintextNote() { super(); }
+    public PlaintextNote(UUID uuid, byte[] content) {
+        super(uuid, content);
     }
 
     @Nullable
     public static PlaintextNote decryptNote(Note note, String password) {
-        byte[] decryptedContent = Crypto.decrypt(note.getContentBytes(), note.getIdBytes(), password);
+        byte[] decryptedContent = Crypto.decrypt(note.getContentBytes(), note.getUUIDBytes(), password);
 
         if (decryptedContent== null) {
             return null;
         }
 
-        return new PlaintextNote(note.getId(), decryptedContent);
+        return new PlaintextNote(note.getUuid(), decryptedContent);
     }
 
     public String getContentString() {
@@ -31,5 +32,10 @@ public class PlaintextNote extends Note {
 
     public void setContentString(String contentString) {
         setContentBytes(contentString.getBytes());
+    }
+
+    @Override
+    public String toString() {
+        return getContentString();
     }
 }

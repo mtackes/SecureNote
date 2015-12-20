@@ -10,18 +10,24 @@ import java.util.UUID;
  */
 public class CryptoNote extends Note {
 
-    public CryptoNote(UUID id, byte[] encryptedContent) {
-        super(id, encryptedContent);
+    public CryptoNote() { super(); }
+    public CryptoNote(UUID uuid, byte[] encryptedContent) {
+        super(uuid, encryptedContent);
     }
 
     @Nullable
     public static CryptoNote encryptNote(Note note, String password) {
-        byte[] encryptedContent = Crypto.encrypt(note.getContentBytes(), note.getIdBytes(), password);
+        byte[] encryptedContent = Crypto.encrypt(note.getContentBytes(), note.getUUIDBytes(), password);
 
         if (encryptedContent == null) {
             return null;
         }
 
-        return new CryptoNote(note.getId(), encryptedContent);
+        return new CryptoNote(note.getUuid(), encryptedContent);
+    }
+
+    @Override
+    public String toString() {
+        return "## Encrypted Note " + getUuid().toString() + " ##";
     }
 }

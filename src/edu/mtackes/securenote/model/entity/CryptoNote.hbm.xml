@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="edu.mtackes.securenote.model.entity.CryptoNote" table="notes">
+        <meta attribute="class-description">
+            Contains encrypted note content.
+        </meta>
+        <id name="id" type="int" column="id">
+            <generator class="native" />
+        </id>
+        <property name="uuid" type="uuid-char" column="uuid" />
+        <property name="contentBytes" type="byte[]" column="contents" />
+        <property name="title" type="string" column="title" />
+        <!--<property name="owner" column="owner_id" type="edu.mtackes.securenote.model.entity.User"/>-->
+    </class>
+</hibernate-mapping>

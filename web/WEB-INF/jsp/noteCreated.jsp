@@ -15,7 +15,7 @@
 <body>
     <h1>Note Created</h1>
     <p>Your note was successfully created.</p>
-    <p>Retrieve it with the ID <strong><code>${uuid}</code></strong> or at the url <a href="/note/${uuid}">${rootUrl}/getNote/${uuid}</a>.</p>
+    <p>Retrieve it with the ID <strong><code>${uuid}</code></strong> or at the url <a href="/note/${uuid}">${rootUrl}/note/${uuid}</a>.</p>
     <br />
     <p><strong>Keep this ID and your password safe!</strong> There is no recovering lost notes or passwords.</p>
 </body>

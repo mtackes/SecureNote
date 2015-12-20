@@ -19,7 +19,7 @@
     <br />
     <label for="notePassword">Password</label>
     <br />
-    <input id="notePassword" name="notePassword" type="password" />
+    <input id="notePassword" name="notePassword" type="password" autofocus="autofocus" />
 
     <input type="submit" />
 </form>
